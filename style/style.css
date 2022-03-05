@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+.images {
+  width: 500px;
+  height: 200px;
+  border: 1px solid white;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  margin: 40px 0 0 20px;
+  overflow: scroll;
+  box-shadow: 3px 3px 10px white,
+  -3px -3px 10px white;
+}
+.images::-webkit-scrollbar {
+  display: none;
+}
+.images img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  box-shadow: 2px 2px 6px gray, -2px -2px 6px gray;
+  cursor: pointer;
+  transition: 300ms all;
+  margin: 10px 5px;
+}
+.flex {
+  width: 100%;
+  height: calc(100vh - 200px);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.file {
+  margin: 0 auto;
+  width: 700px;
+  height: 300px;
+  border: 1px solid gray;
+  background-color: lightgray;
+  border-radius: 10px;
+  overflow: scroll;
+}
+.file::-webkit-scrollbar {
+  display: none;
+}
+.file img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  position: relative;
+  top: 20px;
+  left: 20px;
+  margin: 0 10px 10px 0;
+  opacity: 0.4;
+}
+.flex .file .download {
+  position: absolute;
+  top: 72%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  width: 120px;
+  height: 70px;
+  border: 1px solid black;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+}
+
+.opacity {
+  opacity: 0.5;
+}
+.changeView {
+  background-color: rgb(165, 165, 165);
+}
+
+
+@media only screen and (max-width: 600px)  {
+    .images{
+        width: 90%;
+        height: 250px;
+        margin: 50px auto;
+    }
+    .flex{
+        width: 350px;
+        height: calc(100vh - 400px);
+        margin: 0 auto;
+    }
+    .flex .file .download{
+        top: 69%;
+    }
+}
